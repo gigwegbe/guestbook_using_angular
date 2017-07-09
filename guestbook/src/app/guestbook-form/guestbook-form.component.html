@@ -1,0 +1,42 @@
+<div class="jumbotron jumobtron-fluid">
+<div class="container">
+  <h1 class="display-3">Guestbook Entries</h1>
+  <form>
+    <div>
+      <label for="username">Username</label>
+      <input  type="text" class="form-control" id="username" required [(ngModel)]="model.username" name="username"> 
+    </div>
+           <br>
+   <div>
+      <label for="email">Email</label>
+      <input  type="email" class="form-control" id="email" required [(ngModel)]="model.email" name="email">
+    </div>
+            <br>
+     <div> 
+      <label for="Field">Field</label>
+    <select class="form-control" id="field">
+      <option>Sales</option>
+      <option>Logistics</option>
+      <option>Engineering</option>
+      <option>IT</option>
+    </select>
+     </div>
+             <br>
+    <div>
+      <label for="your subject">Your subject</label>
+      <input  type="text" class="form-control" id="Subject" required [(ngModel)]="model.subject" name="subject">
+    </div>
+            <br>
+    <div>
+     <label for="messageTextarea">Your message</label>
+    <textarea class="form-control" id="messageTextarea" rows="3" required [(ngModel)]="model.message" name="message"></textarea>
+    </div>
+               <br>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+  <div>
+    <h2> Current guest:</h2>
+    {{ currentGuest}}
+  </div>
+</div>
+</div>
